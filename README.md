@@ -1,4 +1,4 @@
-## Credit Risk Prediction Project
+## Machine Learning Approach to Credit Risk Scoring
 - Objective: To predict the probability of default for a given customer
 - Data: 
     - age: Age of the individual
