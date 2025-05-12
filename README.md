@@ -19,7 +19,7 @@
 
     - default: Possibly a score or risk indicator for loan default
 
-### 📝 Project Summary: Credit Default Prediction
+### Project Summary: Credit Default Prediction
 
 - This project focuses on predicting whether an individual will **default on a loan** based on financial and demographic features such as age, income, employment history, debt-to-income ratio, etc.
 
