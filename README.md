@@ -1,41 +1,45 @@
 ## Machine Learning Approach to Credit Risk Scoring
-- Objective: To predict the probability of default for a given customer
-- Data: 
-    - age: Age of the individual
 
-    - ed: Education level (probably coded numerically)
+**Objective:** Predict the probability of loan default for a given customer using financial and demographic data.
 
-    - employ: Years of employment
+**Dataset Features:**
+- `age`: Age of the individual  
+- `ed`: Education level  
+- `employ`: Years of employment  
+- `address`: Years at current address  
+- `income`: Annual income  
+- `debtinc`: Debt-to-Income ratio  
+- `creddebt`: Credit card debt  
+- `othdebt`: Other types of debt  
+- `default`: Target variable (loan default indicator)
 
-    - address: Years at current address
+### 🔍 Project Summary
 
-    - income: Annual income (possibly in $1,000s)
+This project applies supervised machine learning techniques to classify whether a loan applicant is likely to default. The workflow included data preprocessing, feature scaling, model training, and evaluation.
 
-    - debtinc: Debt-to-Income ratio
+**Steps Taken:**
+- Cleaned and split the dataset (80% training, 20% testing)
+- Scaled features using `StandardScaler`
+- Built and evaluated three models:
+  1. **Random Forest Classifier** – ~82.1% accuracy
+  2. **Support Vector Machine (SVM)** – Tuned with `GridSearchCV`, ~82.1% accuracy
+  3. **Logistic Regression** – Best performance at ~83.6% accuracy
 
-    - creddebt: Credit card debt
+**Key Insights:**
+- All models performed well in identifying non-defaulters.
+- Slightly lower performance on predicting actual defaulters due to possible class imbalance.
+- **Logistic Regression** was the most interpretable and accurate, making it a strong candidate for production use.
 
-    - othdebt: Other types of debt
 
-    - default: Possibly a score or risk indicator for loan default
-
-### Project Summary: Credit Default Prediction
-
-- This project focuses on predicting whether an individual will **default on a loan** based on financial and demographic features such as age, income, employment history, debt-to-income ratio, etc.
-
-- The dataset was preprocessed by:
-  - Separating features and the target variable (`default`)
-  - Splitting the data into **80% training and 20% testing**
-  - Scaling the features using **StandardScaler** to improve model performance
-
-- Three machine learning models were built and evaluated:
-  1. **Random Forest Classifier** – Achieved an accuracy of approximately **82.1%**
-  2. **Support Vector Machine (SVM)** – Tuned with `GridSearchCV`, also reached about **82.1% accuracy**
-  3. **Logistic Regression** – Performed the best with an accuracy of **~83.6%**
-
-- A **confusion matrix** was plotted to visualize the prediction results:
-  - The models performed well in identifying **non-defaulters**
-  - They were slightly less effective in identifying actual defaulters, indicating some **class imbalance** or sensitivity trade-off
-
-- **Conclusion**: 
-  - While all models performed well, **Logistic Regression** offered the best combination of **accuracy and interpretability**, making it a reliable choice for credit risk analysis.
+## Credit Scoring
+- Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
+- Why is it used? 
+    - Credit Scoring enables decision making at all customer lifecycle stages
+    - Removes the need to manually examine each loan customer
+    - Clear understanding of Denial or Approval reasons leading to sound business approach
+- How is it used?
+    - Credit Scores are used to determine the following areas under Loan portfolios
+        - Approval – Should the Loan be approved?
+        - Pricing – What is the right Interest ?
+        - Cross Sell – Can we sell another loan ?
+        - Refinance – Should there be a change in Interest?
