@@ -22,12 +22,12 @@ This project applies supervised machine learning techniques to classify whether 
 #### 1. Income by Age
 This plot shows how annual income varies with age. There’s a noticeable rise with age until ~50, followed by a drop.
 
-![Income by Age](images/1.png)
+![Income by Age](Images/1.png)
 
 #### 2. Debt-to-Income Ratio by Age
 The debt-to-income ratio appears relatively stable but with spikes at older ages, potentially influencing default probability.
 
-![Debt-to-Income by Age](images/2.png)
+![Debt-to-Income by Age](Images/2.png)
 
 **Steps Taken:**
 - Cleaned and split the dataset (80% training, 20% testing)
@@ -63,4 +63,4 @@ The confusion matrix below reflects predictions from the Logistic Regression mod
 - Most correct predictions are in the top-left (non-defaulters correctly classified).
 - Bottom-right is lighter, meaning some actual defaulters were missed.
 
-![Confusion Matrix](images/3.png)
+![Confusion Matrix](Images/3.png)
