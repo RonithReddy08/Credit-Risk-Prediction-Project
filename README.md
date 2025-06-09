@@ -17,6 +17,18 @@
 
 This project applies supervised machine learning techniques to classify whether a loan applicant is likely to default. The workflow included data preprocessing, feature scaling, model training, and evaluation.
 
+### 📊 Exploratory Visualizations
+
+#### 1. Income by Age
+This plot shows how annual income varies with age. There’s a noticeable rise with age until ~50, followed by a drop.
+
+![Income by Age](images/1.png)
+
+#### 2. Debt-to-Income Ratio by Age
+The debt-to-income ratio appears relatively stable but with spikes at older ages, potentially influencing default probability.
+
+![Debt-to-Income by Age](images/2.png)
+
 **Steps Taken:**
 - Cleaned and split the dataset (80% training, 20% testing)
 - Scaled features using `StandardScaler`
@@ -43,3 +55,12 @@ This project applies supervised machine learning techniques to classify whether 
         - Pricing – What is the right Interest ?
         - Cross Sell – Can we sell another loan ?
         - Refinance – Should there be a change in Interest?
+  
+### 📉 Model Performance: Confusion Matrix
+
+The confusion matrix below reflects predictions from the Logistic Regression model:
+
+- Most correct predictions are in the top-left (non-defaulters correctly classified).
+- Bottom-right is lighter, meaning some actual defaulters were missed.
+
+![Confusion Matrix](images/3.png)
